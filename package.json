@@ -3,12 +3,29 @@
   "version": "1.0.0",
   "description": "Yet another keyboard configurator",
   "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snaildos/SnailKM.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "changelog": "gitmoji-changelog",
+    "build": "electron-builder build --win --linux appimage --publish never",
+    "snap": "electron-builder build --linux snap --publish never",
+    "deploy": "electron-builder build --win --linux appimage --publish always"
+  },
   "author": {
     "name": "SnailDOS",
     "email": "snaildos@snaildos.com",
     "url": "https://github.com/snaildos/snailkm"
   },
   "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "electron": "21.2.0",
+    "electron-builder": "23.6.0",
+    "gitmoji-changelog": "2.3.0"
+  },
   "dependencies": {
     "sudo-prompt": "^9.2.1",
     "update-electron-app": "^2.0.1"

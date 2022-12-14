@@ -1,0 +1,16 @@
+{
+  "name": "snailkm",
+  "version": "1.0.0",
+  "description": "Yet another keyboard configurator",
+  "main": "main.js",
+  "author": {
+    "name": "SnailDOS",
+    "email": "snaildos@snaildos.com",
+    "url": "https://github.com/snaildos/snailkm"
+  },
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "sudo-prompt": "^9.2.1",
+    "update-electron-app": "^2.0.1"
+  }
+}

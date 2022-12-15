@@ -1,7 +1,7 @@
 {
   "name": "SnailKM",
-  "version": "1.0.2",
-  "description": "Yet another keyboard configurator",
+  "version": "1.0.3",
+  "description": "Keyboard Configurator for SnailDOS keyboards.",
   "main": "main.js",
   "repository": {
     "type": "git",

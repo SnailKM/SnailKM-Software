@@ -12,7 +12,7 @@
     "start": "electron .",
     "changelog": "gitmoji-changelog",
     "manual-build": "electron-builder build --win --linux appimage --publish never",
-    "snap": "electron-builder build --linux snap --publish never",
+    "snap": "electron-builder build --linux snap --publish never"
   },
   "author": {
     "name": "SnailDOS",

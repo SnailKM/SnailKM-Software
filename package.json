@@ -1,6 +1,6 @@
 {
-  "name": "snailkm",
-  "version": "1.0.0",
+  "name": "SnailKM",
+  "version": "1.0.1",
   "description": "Yet another keyboard configurator",
   "main": "main.js",
   "repository": {

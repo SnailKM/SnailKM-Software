@@ -1,11 +1,11 @@
 {
   "name": "SnailKM",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Yet another keyboard configurator",
   "main": "main.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/snaildos/SnailKM.git"
+    "url": "https://github.com/SnailKM/SnailKM.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,7 +17,7 @@
   "author": {
     "name": "SnailDOS",
     "email": "snaildos@snaildos.com",
-    "url": "https://github.com/snaildos/snailkm"
+    "url": "https://github.com/SnailKM/SnailKM"
   },
   "license": "GPL-3.0-or-later",
   "devDependencies": {

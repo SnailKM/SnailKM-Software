@@ -31,7 +31,7 @@ const createWindow = () => {
     return false;
   });
 
-  mainWindow.loadURL("https://usevia.app");
+  mainWindow.loadURL("https://639b5455a26482517ea42e1d--cheery-tanuki-99ac8d.netlify.app/#/");
 };
 
 app.whenReady().then(async () => {

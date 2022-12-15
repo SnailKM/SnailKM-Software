@@ -24,5 +24,5 @@ jobs:
         with:
           # GitHub token, automatically provided to the action
           # (No need to define this secret in the repo settings)
-          github_token: ${{ secrets.TOKEN }}          
+          github_token: ${{ github.TOKEN }}          
           release: true

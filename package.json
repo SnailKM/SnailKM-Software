@@ -1,11 +1,11 @@
 {
   "name": "SnailKM",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Keyboard Configurator for SnailDOS keyboards.",
   "main": "main.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SnailKM/SnailKM.git"
+    "url": "https://github.com/SnailKM/SnailKM"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -26,6 +26,7 @@
     "gitmoji-changelog": "2.3.0"
   },
   "dependencies": {
+    "electron-is-dev": "^2.0.0",
     "sudo-prompt": "^9.2.1",
     "update-electron-app": "^2.0.1"
   }

@@ -1,7 +1,11 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, autoUpdater } = require("electron");
 const { checkAccess } = require("./prompt-linux-access.js");
 const IS_LINUX = require("os").platform() === "linux";
-require('update-electron-app')()
+const isDev = require('electron-is-dev');
+const server = 'https://update.electronjs.org'
+const feed = `${server}/SnailKM/SnailKM/${process.platform}-${process.arch}/${app.getVersion()}`
+
+autoUpdater.setFeedURL(feed)
 
 const createWindow = () => {
   const mainWindow = new BrowserWindow({
@@ -38,6 +42,15 @@ const createWindow = () => {
 app.whenReady().then(async () => {
   if (IS_LINUX) {
     await checkAccess(app);
+  } else {
+    if (isDev) {
+      console.log('Running in development');
+    } else {
+      console.log('Running in production');
+      setInterval(() => {
+        autoUpdater.checkForUpdates()
+      }, 10 * 60 * 1000)
+    }
   }
   createWindow();
 

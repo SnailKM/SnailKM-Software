@@ -47,9 +47,12 @@ app.whenReady().then(async () => {
       console.log('Running in development');
     } else {
       console.log('Running in production');
+      console.log('Update scheduled')
       setInterval(() => {
         autoUpdater.checkForUpdates()
       }, 1 * 60 * 1000)
+      console.log('Running auto updater now manually')
+      autoUpdater.checkForUpdates()
     }
   }
   createWindow();

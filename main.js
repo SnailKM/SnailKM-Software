@@ -49,7 +49,7 @@ app.whenReady().then(async () => {
       console.log('Running in production');
       setInterval(() => {
         autoUpdater.checkForUpdates()
-      }, 10 * 60 * 1000)
+      }, 1 * 60 * 1000)
     }
   }
   createWindow();

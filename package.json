@@ -1,6 +1,6 @@
 {
   "name": "SnailKM",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Keyboard Configurator for SnailDOS keyboards.",
   "main": "main.js",
   "repository": {
@@ -18,6 +18,19 @@
     "name": "SnailDOS",
     "email": "snaildos@snaildos.com",
     "url": "https://github.com/SnailKM/SnailKM"
+  },
+  "build": {
+    "win": {
+      "target": [
+        {
+          "target": "squirrel",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    }
   },
   "license": "GPL-3.0-or-later",
   "devDependencies": {

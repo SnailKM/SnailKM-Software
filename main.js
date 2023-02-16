@@ -3,7 +3,7 @@ const { checkAccess } = require("./prompt-linux-access.js");
 const IS_LINUX = require("os").platform() === "linux";
 const isDev = require('electron-is-dev');
 const server = 'https://update.electronjs.org'
-const feed = `${server}/SnailKM/SnailKM/${process.platform}-${process.arch}/${app.getVersion()}`
+const feed = `${server}/SnailKM/SnailKM-Software/${process.platform}-${process.arch}/${app.getVersion()}`
 
 autoUpdater.setFeedURL(feed)
 

@@ -1,11 +1,8 @@
-const { app, BrowserWindow, autoUpdater } = require("electron");
+const { app, BrowserWindow } = require("electron");
 const { checkAccess } = require("./prompt-linux-access.js");
 const IS_LINUX = require("os").platform() === "linux";
 const isDev = require('electron-is-dev');
-const server = 'https://update.electronjs.org'
-const feed = `${server}/SnailKM/SnailKM-Software/${process.platform}-${process.arch}/${app.getVersion()}`
-
-autoUpdater.setFeedURL(feed)
+const {autoUpdater} = require("electron-updater");
 
 const createWindow = () => {
   const mainWindow = new BrowserWindow({
@@ -48,11 +45,9 @@ app.whenReady().then(async () => {
     } else {
       console.log('Running in production');
       console.log('Update scheduled')
-      setInterval(() => {
-        autoUpdater.checkForUpdates()
-      }, 1 * 60 * 1000)
-      console.log('Running auto updater now manually')
-      autoUpdater.checkForUpdates()
+      app.on('ready', function()  {
+        autoUpdater.checkForUpdatesAndNotify();
+      });
     }
   }
   createWindow();
@@ -65,3 +60,10 @@ app.whenReady().then(async () => {
 app.on("window-all-closed", function () {
   if (process.platform !== "darwin") app.quit();
 });
+
+autoUpdater.on('download-progress', (progressObj) => {
+  let log_message = "Download speed: " + progressObj.bytesPerSecond;
+  log_message = log_message + ' - Downloaded ' + progressObj.percent + '%';
+  log_message = log_message + ' (' + progressObj.transferred + "/" + progressObj.total + ')';
+  sendStatusToWindow(log_message);
+})

@@ -35,7 +35,7 @@
   "devDependencies": {
     "electron": "22.1.0",
     "electron-builder": "23.6.0",
-    "gitmoji-changelog": "2.3.0",
+    "gitmoji-changelog": "2.3.0"
   },
   "dependencies": {
     "electron-is-dev": "^2.0.0",

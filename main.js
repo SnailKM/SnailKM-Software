@@ -33,17 +33,8 @@ const createWindow = () => {
     return false;
   });
 
-  mainWindow.loadURL("https://639b5455a26482517ea42e1d--cheery-tanuki-99ac8d.netlify.app/");
-};
-
-// Linux
-app.whenReady().then(async () => {
-  if (IS_LINUX) {
-    await checkAccess(app);
-  }
-
-// Auto Updater
-app.on('ready', function()  {
+  // Auto Updater
+  mainWindow.once('ready-to-show', () => {
   if (isDev) {
     console.log('Running in development');
   } else {
@@ -55,6 +46,15 @@ app.on('ready', function()  {
     autoUpdater.checkForUpdatesAndNotify();
   }
 });
+
+  mainWindow.loadURL("https://639b5455a26482517ea42e1d--cheery-tanuki-99ac8d.netlify.app/");
+};
+
+  // Linux
+  app.whenReady().then(async () => {
+    if (IS_LINUX) {
+      await checkAccess(app);
+  }
 
   createWindow();
 

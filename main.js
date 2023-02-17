@@ -45,9 +45,7 @@ app.whenReady().then(async () => {
     } else {
       console.log('Running in production');
       console.log('Update scheduled')
-      app.on('ready', function()  {
-        autoUpdater.checkForUpdatesAndNotify();
-      });
+      autoUpdater.checkForUpdatesAndNotify();
     }
   }
   createWindow();

@@ -44,7 +44,7 @@ app.whenReady().then(async () => {
       console.log('Running in development');
     } else {
       console.log('Running in production');
-      console.log('Update scheduled')
+      console.log('Checking for updates...')
       autoUpdater.checkForUpdatesAndNotify();
     }
   }

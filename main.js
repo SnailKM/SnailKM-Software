@@ -38,12 +38,16 @@ const createWindow = () => {
   if (isDev) {
     console.log('Running in development');
   } else {
+    console.log('SnailDOS Powered')
+    console.log('App Version:')
+    console.log(process.env.npm_package_version)
     console.log('Running in production');
-    console.log('Setting params...')
+    console.log('Setting parameters...')
     autoUpdater.logger = require("electron-log")
     autoUpdater.logger.transports.file.level = "info"
-    console.log('Update Task Sent')
+    console.log('Sending update task now.')
     autoUpdater.checkForUpdatesAndNotify();
+    console.log('App is ready.')
   }
 });
 

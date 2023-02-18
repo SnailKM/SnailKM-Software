@@ -40,7 +40,7 @@ const createWindow = () => {
   } else {
     console.log('SnailDOS Powered')
     console.log('App Version:')
-    console.log(process.env.npm_package_version)
+    console.log(app.getVersion())
     console.log('Running in production');
     console.log('Setting parameters...')
     autoUpdater.logger = require("electron-log")

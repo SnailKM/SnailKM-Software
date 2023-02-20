@@ -9,7 +9,7 @@ const createWindow = () => {
     width: 1600,
     height: 900,
     autoHideMenuBar: true,
-    icon: __dirname + './build/logo.ico',
+    icon: 'icon.ico',
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,

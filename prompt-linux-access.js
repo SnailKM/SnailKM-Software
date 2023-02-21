@@ -13,7 +13,7 @@ const messageOptions = {
   buttons: ["Cancel", "Continue"],
   defaultId: 2,
   title: "",
-  message: "Allow VIA Access",
+  message: "Allow SnailKM Access",
   detail:
     "In order to communicate with your keyboard we need to add a udev rule which requires root permissions. Continue?",
 };
@@ -42,7 +42,7 @@ async function checkAccess(app) {
         if (response === 0) {
           app.quit();
         } else {
-          sudo.exec(cmd, { name: "VIA" }, (err, out) =>
+          sudo.exec(cmd, { name: "SnailKM" }, (err, out) =>
             err ? rej(err) : res(out)
           );
         }

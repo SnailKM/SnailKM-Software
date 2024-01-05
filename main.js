@@ -15,7 +15,13 @@ const createWindow = () => {
       contextIsolation: true,
       sandbox: true,
     },
+    title: require('./package.json').name + ' ' + require('./package.json').version
   });
+
+  mainWindow.on('page-title-updated', (event) => {
+    event.preventDefault();
+  });
+
   mainWindow.webContents.session.on(
     "select-hid-device",
     (event, details, callback) => {
@@ -51,11 +57,11 @@ const createWindow = () => {
   }
 });
 
-  mainWindow.loadURL("https://639b5455a26482517ea42e1d--cheery-tanuki-99ac8d.netlify.app/");
+mainWindow.loadURL("https://639b5455a26482517ea42e1d--cheery-tanuki-99ac8d.netlify.app/");
 };
 
   // Linux
-  app.whenReady().then(async () => {
+app.whenReady().then(async () => {
     if (IS_LINUX) {
       await checkAccess(app);
   }

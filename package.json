@@ -1,6 +1,6 @@
 {
   "name": "SnailKM",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Keyboard Configurator for SnailDOS keyboards.",
   "main": "main.js",
   "repository": {

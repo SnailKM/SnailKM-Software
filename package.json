@@ -33,7 +33,7 @@
   },
   "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "electron": "28.0.0",
+    "electron": "28.3.3",
     "electron-builder": "24.9.1",
     "gitmoji-changelog": "2.3.0"
   },
